@@ -21,8 +21,6 @@ pipeline {
 		always{
 			archiveArtifacts artifacts: 'target/surefire-reports/*.xml', fingerprint: true
 			junit 'target/surefire-reports/*.xml'
-			sh 'chmod +x ./deployfile.sh'
-			sh './deployfile.sh'
 		}
         }
 }
